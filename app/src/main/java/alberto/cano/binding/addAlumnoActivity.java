@@ -72,12 +72,12 @@ public class addAlumnoActivity extends AppCompatActivity {
         }
 
         RadioButton rb = findViewById(binding.rgGrupoAddAlumno.getCheckedRadioButtonId());
-        char grupo = (rb.getText().toString().split("")[1].charAt(0));
+        char grupo = (rb.getText().toString().split(" ")[1].charAt(0));
         Alumno alumno = new Alumno(
                 binding.txtNombreAddAlumno.getText().toString(),
                 binding.txtApellidosAddAlumno.getText().toString(),
                 binding.spCiclosAlumno.getSelectedItem().toString(),
-                "a");
+                String.valueOf(grupo));
 
         return alumno;
     }
